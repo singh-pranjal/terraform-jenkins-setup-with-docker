@@ -39,3 +39,6 @@ systemctl restart jenkins
 
 echo "===== Jenkins status ====="
 systemctl status jenkins --no-pager
+
+docker --version
+systemctl status docker --no-pager
