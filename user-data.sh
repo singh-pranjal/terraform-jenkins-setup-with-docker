@@ -32,6 +32,7 @@ echo "===== WAIT for systemd to settle ====="
 sleep 30
 systemctl daemon-reexec
 systemctl daemon-reload
+mount -o remount,size=2G /tmp
 
 echo "===== Enable and start Jenkins ====="
 systemctl enable jenkins
@@ -39,8 +40,7 @@ systemctl restart jenkins
 
 echo "===== Jenkins status ====="
 systemctl status jenkins --no-pager
-
 docker --version
 systemctl status docker --no-pager
 
-sudo mount -o remount,size=2G /tmp
+
