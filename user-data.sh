@@ -42,3 +42,5 @@ systemctl status jenkins --no-pager
 
 docker --version
 systemctl status docker --no-pager
+
+sudo mount -o remount,size=2G /tmp
